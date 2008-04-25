@@ -1,0 +1,20 @@
+table-diff project
+
+TableDiff Ruby class
+Copyright (c) 2008 Kentfield School District.
+
+This class encapsulates the DBI connections to two tables whose
+contents are to be compared.  For each connection, you must specify
+a table name, the columns within the table that will be compared,
+and the columns that will be used as a primary key to identify
+the same records within each table.
+
+Code for this class is a Ruby/DBI port of the pg_comparator perl 
+command-line program written for Postgresql by Fabian Coelho.  
+See http://pgfoundry.org/projects/pg-comparator for the latest
+version of the perl source on which this port was based.
+
+Tested with dbd-mysql and a few different tables.  I would love to see
+if the CRC / XOR / CONCAT / CREATE TABLE AS SELECT code would work with 
+Sqlite3 or another SQL dialect. Feel free to fork or send patches to 
+pzingg AT kentfieldschools FULLSTOP org
