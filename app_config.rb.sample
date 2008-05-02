@@ -1,0 +1,29 @@
+# app_config.rb
+
+# configuration global has for TableDiff example
+APP_CONFIG = {
+  # smtp settings for email notifications
+  :mail_to       => 'user@example.com',
+  :mail_from     => 'admin@example.com',
+  :mail_server   => 'mail.example.com',
+  :mail_port     => 25,
+  :mail_user     => 'admin',
+  :mail_password => 'password',
+  :mail_auth     => :login,
+  
+  # an odbc source; in this case, PowerSchool
+  :dbi_src => {
+    :adapter   => 'odbc',
+    :database  => 'powerschool_source', 
+    :user      => 'powerschool_user', 
+    :password  => 'powerschool_password',
+  },
+  
+  # an empty mysql database to build diffs in
+  :dbi_dst => {
+    :adapter   => 'mysql',
+    :database  => 'diffs', 
+    :user      => 'mysql_user', 
+    :password  => 'mysql_password',
+  }  
+}
